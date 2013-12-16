@@ -61,5 +61,18 @@ $(document).ready(function(){
 		$('div li').removeClass('active');
 		$( "li[name='team']" ).toggleClass('active');
 	});
-	
+
+	if($('body').height() < $('#pills').height()){
+			$('#pills').css('position', 'absolute');
+		}else{
+			$('#pills').css('position', 'fixed');
+	}
+
+	$( window ).resize(function() {
+		if($('body').height() < $('#pills').height()){
+			$('#pills').css('position', 'absolute');
+		}else{
+			$('#pills').css('position', 'fixed');
+		}
+	});
 });
