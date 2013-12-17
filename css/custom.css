@@ -8,6 +8,8 @@ body {
 .footer{
 	text-align:center;
 	color: white;
+	 font-family:Iceland;
+	 font-size:20px;
 }
 
 #navigation {
@@ -26,4 +28,7 @@ body {
 	background-color: rgb(1,1,1); 
 }
 
+ul li{
+	font-family: Play;
+}
 
