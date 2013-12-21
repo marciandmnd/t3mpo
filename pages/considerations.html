@@ -1,11 +1,30 @@
 <h3>VI. Design Considerations</h3>
 <hr>
-<h4>Objectives</h4>
-<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+<h4>Objective</h4>
+<br>
+<p>The primary objective of T3MPO was to develop a software interface that provides users the capability to control the playback of audio clips in Ableton, a popular digital audio workstation(DAW), in 3-dimensional space. To control clip playback, a 5 x 5 button grid was superimposed on a depth-map image of the user.  The user can toggle the virtual buttons on or off in a similar fashion to their analog counterparts.  That is, to toggle a virtual button, a user pushes it.
 </p>
+<br>
 <h4>Constraints</h4>
-<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-</p>
-<h4>Standards</h4>
-<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+	<p>
+	<strong>Hardware Constraints:</strong><br>
+	
+	<u>Kinect Sensor</u>:<br>
+	<ul>
+		<li>Microsoft OS: Windows XP, Windows 7</li>
+		<li>Microsoft OS: OS X 10.6 or later</li>
+		<li>32 bit (x86) or 64 bit (x64) processor</li>
+		<li>Dual-core 2.66-GHz or faster processor</li>
+		<li>Dedicated USB 2.0 bus</li>
+		<li>2 GB RAM</li> 
+	</ul> 
+	<br><strong>Software Constraints:</strong><br><br>
+
+	<u>OpenNI</u>: Open source software development kit for 3D Sensors.<br>
+	<u>Synapse</u>: A software module built using OpenNI framework and has message sending capabilities for communication with DAWs.<br>
+	<u>Ableton</u>:  Ableton is the DAW whose audio clips are launched via T3MPO.  The system requirements for Ableton are: Intel® Mac with Mac OS X 10.5 or later, or PC with Windows XP, Windows Vista, Windows 7 or Windows 8; Multicore processor; 2 GB RAM; 1024x768 display; DVD drive or broadband internet connection for installation;  3GB free disk space are required for basic installation
+
+	<br><strong>Design Constraints:</strong><br>
+	5 x 5 button grid.  Visual Feedback for button toggling.
+	<br><h4>Standards</h4><br><br>
 </p>
