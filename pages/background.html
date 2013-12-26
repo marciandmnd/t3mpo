@@ -1,8 +1,34 @@
 <h3>III. Background</h3>
 <hr>
 <p>
-The genre of electronic music is constantly expanding.  In recent years, the genre has become “a stadium-level moneymaker.”  Electronic dance music festivals like the Electric Daisy Carnival today sell out hundreds of thousands tickets in advance.  Even traditionally rock-and-roll festivals like Coachella and Lollapalooza now feature headlining electronic music acts.  Pop artists like Lady Gaga and Beyoncé are relying on electronic producers and musicians to create hits.  In order to compose and perform music, popular electronic artists frequently rely on a combination of software-based digital audio workstations (DAWs) to customize sounds, construct songs, and process samples as well as programmable MIDI controllers to trigger musical transitions and events, control the parameters or effects of a synthesizer, and play melodies for an assigned instrument.
+The project involves the use of several devices, software libraries, and applications working in tandem:
+<br><br>
+<strong>Kinect</strong>
+<br><br>
+T3MPO uses the infrared emitter and camera of Microsoft’s Kinect in order to obtain data delineating the user’s body movements in 3-dimensional space.  The Kinect sensor emits a grid of infrared dots on the user and their surroundings.  The intensity and displacement of the infrared grid is measured by the camera and then converted to distances from the Kinect.  Using SDKs like OpenNI, users can manipulate this data to generate grayscale depth images, assign skeletal wireframes, and track joint movement and gestures.
+<br><br>
+<strong>OpenNI and openFrameworks</strong>
+<br><br>
+OpenNI is an open source framework for 3D sensing devices that include the Kinect. openFrameworks is an open source C++ library for creative coding and graphics.  
+<br><br>
+T3MPO uses OpenNI to communicate with the Kinect to generate a depth image, pin a skeletal wireframe to a user, and track the joints of the body in real time.  
+We also used openFrameworks to easily implement GUIs for each of T3MPO’s modes.
+<br><br>
+<strong>Ableton Live</strong>
+<br><br>
+Ableton Live is a digital audio workstation (DAW) that is used as a tool for composing, recording, arranging, mixing and mastering music.  Live offers powerful integration with audio and MIDI sampling, has strong quantization and beat-matching capabilities, and remains popular with electronic performers for its versatility and universal compatibility with MIDI-programmable controllers (MPCs).
+<br><br>
+
+
+Ableton Live serves as the music environment that T3MPO is built to interact with.  Users will interact with virtual controls and instruments within T3MPO which will then be translated to properly operating controls and effects within Ableton Live.
+<br><br>
+
+<strong>Max/MSP</strong>
+<br><br>
+
+Max/MSP is a modular, graphical programming language for music and multimedia. Because of Max’s popularity and ease in creating custom effects and instruments, the most recent versions of Ableton Live include a toolkit based on Max/MSP called Max for Live.  This toolkit allows users to easily implement their own custom sounds and controls in the Live performance and production environment.
+<br><br>
+
+In the T3MPO project, Max for Live modules are responsible for handling the outgoing UDP messages and decoding them to perform the intended commands within Ableton Live. 
 </p>
-<p>
-As an unfortunate consequence of the performer’s reliance on electronic-based production equipment, the performer is limited to turning knobs and dials, flipping switches or pushing buttons to create music.  We believe that this form of performance is particularly lacking from the standpoint of the audience.  The Touchless 3D Music Production Overlord (T3MPO) is a system that eliminates the use of physical components to create music in a DAW.  Rather, the user of the DAW composes music via body gestures and movements in 3-dimensional space.  Body gesture/movement data are captured by infrared and RGB camera sensors in the Microsoft Kinect.  The data is then used as control inputs to tweak parameters and trigger events in the DAW, effectively turning the human body into a musical instrument.  Furthermore, the system will also feature the creation of real-time, musical visualizations that will help aid the audience’s experience.  This system improves upon the already popular genre of electronic music. 
-</p>
+ 

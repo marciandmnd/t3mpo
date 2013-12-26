@@ -1,14 +1,18 @@
 <h3>II. Introduction</h3>
 <hr>
-<p>
-Music has traditionally been created by playing physical musical instruments.  With the advent of computers and electronics, a new approach to music creation was birthed and is presently evolving.  This approach involves a synthesis of sounds via analog and/or digital circuitry; colloquially referred to as electronic music.  Although electronic musical instruments (i.e. synthesizers, MIDI controllers, drum machines, etc.) are available in physical packages,  many physical units have been emulated in software.  Powerful applications, known as Digital Audio Workstations (DAWs), have expansive sound libraries that imitate the capabilities of synthesizers and even analog instruments.  Also, DAWs usually have a sequencing and tracking environment in which musical compositions can be created, edited, and mixed.  
-</p>
-<p>
-One popularly used DAW is the program Ableton Live.  In contrast to many other software sequencers, Live is designed to be an instrument for live performances as well as a tool for composing, recording, arranging, mixing, and mastering.  Live also has powerful integration with audio and MIDI sampling, offering a suite of controls for beatmatching, crossfading, and other effects used by DJs and turntablists.  It offers full support in working with popular MIDI controllers and audio devices and can be configured to work with custom instruments and controllers via Max/MSP.
-</p>
-<p>
-Max/MSP is a modular, graphical programming language for music and multimedia applications developed by Cycling ‘74, a San Francisco-based software company.  Max programs (called patches) are made by arranging and connecting building-blocks of objects within a patcher, or visual canvas. These objects act as self-contained programs (in reality, they are dynamically-linked libraries), each of which may receive input, generate output, or both.  MSP (short for Max Signal Processing) is an included add-on package for Max that allows for the manipulation of digital audio signals in real-time, allowing users to create their own synthesizers and effects processors.  Because of Max’s popularity and ease in custom instrument and effect creation, the most recent versions of Ableton Live include a toolkit based on Max/MSP called Max for Live.  This toolkit allows users to easily implement their own custom sounds in the Live performance and production environment.
-</p>
-<p>	
-T3MPO uses the infrared and RGB camera sensors of Microsoft's Kinect to obtain data delineating the user's body movements and gestures in 3-dimensional space.  This data is processed in the OpenFrameworks program Synapse where the user is assigned a wireframe mapped to his/her body.  The position and movement data associated with each mapped joint of the user’s body is sent to Max/MSP as Open Sound Control (OSC) events, where this information can be processed into configurable parameters within Live.
+<strong>The Problem</strong>
+
+<br><br>
+
+The genre of electronic music is constantly expanding. In recent years, the genre has become “a stadium-level moneymaker.” Electronic dance music festivals like the Electric Daisy Carnival today sell out hundreds of thousands tickets in advance. Even traditionally rock-and-roll festivals like Coachella and Lollapalooza now feature headlining electronic music acts. In order to compose and perform music, popular electronic artists frequently rely on a combination of software-based digital audio workstations (DAWs) to customize sounds, construct songs, and process samples as well as MIDI-programmable controllers to trigger musical transitions and events, control the parameters or effects of a synthesizer, and play melodies for an assigned instrument.
+
+<br><br>
+
+As an unfortunate consequence of the performer’s reliance on electronic-based production equipment, the performer is limited to turning knobs and dials, flipping switches or pushing buttons to create music. We believe that this form of performance is particularly lacking from the standpoint of the audience. The Touchless 3D Music Production Overlord (T3MPO) is a system that eliminates the use of physical components to create music in a DAW. Rather, the user of the DAW composes music via body gestures and movements in 3-dimensional space. Body gesture/movement data are captured by infrared and RGB camera sensors in the Microsoft Kinect. The data is then used as control inputs to tweak parameters and trigger events in the DAW, effectively turning the human body into a musical instrument. Furthermore, the system will also feature the creation of real-time, musical visualizations that will help aid the audience’s experience. This system improves upon the already popular genre of electronic music.
+<br><br>	
+<strong>The Solution</strong>
+<br><br>
+
+The Touchless 3-Dimensional Music Production Overlord (T3MPO) is an OSX/Windows application that allows users to produce and perform music by moving their body and interacting with a virtual set of controls.  T3MPO adds additional functionality to Ryan Challinor’s application, Synapse, which sends the position and event data of fifteen joints of the body measured by Microsoft’s Kinect to be processed by a digital audio workstation, Ableton Live.  T3MPO has a total of four modes of operation for assembling the structures of songs, creating complex rhythms, generating MIDI notes, and tweaking effects and settings on the fly.  T3MPO’s graphical user interfaces (GUIs) additionally inform the audience to better understand how electronic artists play music during a performance.
+
 </p>
