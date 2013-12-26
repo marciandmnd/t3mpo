@@ -37,16 +37,11 @@
 	<ul>
 		<li>OpenNI: Open source software development kit for 3D Sensors.</li>
 		<li>Synapse: A software module built using OpenNI framework and has message sending capabilities for communication with DAWs.</li>
-		<li>Ableton: Ableton is the DAW whose state parameters are modulated via T3MPO.</li>
+		<li>Ableton: Ableton is the DAW whose state parameters are modulated via T3MPO. The system requirements for Ableton are: Intel® Mac with Mac OS X 10.5 or later, or PC with Windows XP, Vista, 7, or 8; Multicore processor; 2 GB RAM; 1024x768 display; DVD drive or broadband internet connection for installation;  3GB free disk space are required for basic installation</li>
 	</ul> 
 	</div>
-	<!--
-	<em>OpenNI</em>:   Open source software development kit for 3D Sensors.<br>
-	<em>Synapse</em>:   A software module built using OpenNI framework and has message sending capabilities for communication with DAWs.<br>
-	<em>Ableton</em>:   Ableton is the DAW whose audio clips are launched via T3MPO.  The system requirements for Ableton are: Intel® Mac with Mac OS X 10.5 or later, or PC with Windows XP, Windows Vista, Windows 7 or Windows 8; Multicore processor; 2 GB RAM; 1024x768 display; DVD drive or broadband internet connection for installation;  3GB free disk space are required for basic installation
-	<br><br>
-	-->
 	</p>
+	<br>
 	<strong>Design Constraints:</strong><br><br>
 	<p>
 	The primary design constraint of T3MPO was to program a 5x5 button grid for the T3MPO user interface.  This button grid is superimposed upon the depth map of the user and provides visual feedback with regards to what audio clips are toggled on or off.  Each button in the first four columns, from left to right, represents an audio clip that may be toggled on or off.  When an audio clip is off, the respective button is grey.  Next, when a user toggles a button on, the button color changes to yellow and vise-versa.  The final column of buttons is used to toggle all the clips on or off in a respective row.  We refer to rows as scenes.  When a scene is launched, or turned on, the corresponding scene control button changes color from gray(the off-state) to magenta (the on-state). To allow users to stop all audio playback at once, a global stop button was added to the upper-left corner of the user interface. This stop button is red.  Initially, its opacity is about 50%.  When the stop button is activated by the user, its opactiy briefly goes to 100%, thus providing the user with feedback that the stop command has been acknowledged. 
