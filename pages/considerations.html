@@ -8,12 +8,14 @@
 <br>
 <h4>Constraints</h4>
 <strong>Hardware Constraints:</strong>
+	<p>
 	<br>
-	<em>Kinect Sensor</em>:  The Kinect is the 3D sensor used by T3MPO to retrieve and delineate the user's body position and gesture data.
+	<em>Kinect Sensor and Computer</em>:  
 	<br>
-	<p>The following computer hardware is required to use the Kinect:</p>
-	<ul>
-		<li>Microsoft OS: Windows XP, Windows 7</li>
+	The Kinect is the 3D sensor used by T3MPO to retrieve and delineate the user's body position and gesture data. A desktop or laptop computer is also required to run T3MPO.
+	<br>
+	The following hardware is required to use T3MPO:
+		<li>Microsoft OS: Windows XP, 8Vista, 7, or </li>
 		<li>Microsoft OS: OS X 10.6 or later</li>
 		<li>32 bit (x86) or 64 bit (x64) processor</li>
 		<li>Dual-core 2.66-GHz or faster processor</li>
@@ -21,13 +23,14 @@
 		<li>2 GB RAM</li> 
 	</ul> 
 	<br>
+	<p>
 <strong>Software Constraints:</strong>
 	<br>
 	<p>A number of software libraries and products from 3rd parties are required for developing and using T3MPO.</p>
-	<em>OpenNI</em>: Open source software development kit for 3D Sensors.<br>
-	<em>Synapse</em>: A software module built using OpenNI framework and has message sending capabilities for communication with DAWs.<br>
-	<em>Ableton</em>:  Ableton is the DAW whose audio clips are launched via T3MPO.  The system requirements for Ableton are: Intel® Mac with Mac OS X 10.5 or later, or PC with Windows XP, Windows Vista, Windows 7 or Windows 8; Multicore processor; 2 GB RAM; 1024x768 display; DVD drive or broadband internet connection for installation;  3GB free disk space are required for basic installation
-	<br>
+	<em>OpenNI</em>:   Open source software development kit for 3D Sensors.<br>
+	<em>Synapse</em>:   A software module built using OpenNI framework and has message sending capabilities for communication with DAWs.<br>
+	<em>Ableton</em>:   Ableton is the DAW whose audio clips are launched via T3MPO.  The system requirements for Ableton are: Intel® Mac with Mac OS X 10.5 or later, or PC with Windows XP, Windows Vista, Windows 7 or Windows 8; Multicore processor; 2 GB RAM; 1024x768 display; DVD drive or broadband internet connection for installation;  3GB free disk space are required for basic installation
+	<br><br>
 	<strong>Design Constraints:</strong><br>
 	<p>
 	The primary design constraint of T3MPO was to program a 5x5 button grid for the T3MPO user interface.  This button grid is superimposed upon the depth map of the user and provides visual feedback with regards to what audio clips are toggled on or off.  Each button in the first four columns, from left to right, represents an audio clip that may be toggled on or off.  When an audio clip is off, the respective button is grey.  Next, when a user toggles a button on, the button color changes to yellow and vise-versa.  The final column of buttons is used to toggle all the clips on or off in a respective row.  We refer to rows as scenes.  When a scene is launched, or turned on, the corresponding scene control button changes color from gray(the off-state) to magenta (the on-state). To allow users to stop all audio playback at once, a global stop button was added to the upper-left corner of the user interface. This stop button is red.  Initially, its opacity is about 50%.  When the stop button is activated by the user, its opactiy briefly goes to 100%, thus providing the user with feedback that the stop command has been acknowledged. 
