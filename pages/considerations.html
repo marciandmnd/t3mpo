@@ -44,6 +44,21 @@
 	<br>
 	<strong>Design Constraints:</strong><br><br>
 	<p>
-	The primary design constraint of T3MPO was to program a 5x5 button grid for the T3MPO user interface.  This button grid is superimposed upon the depth map of the user and provides visual feedback with regards to what audio clips are toggled on or off.  Each button in the first four columns, from left to right, represents an audio clip that may be toggled on or off.  When an audio clip is off, the respective button is grey.  Next, when a user toggles a button on, the button color changes to yellow and vise-versa.  The final column of buttons is used to toggle all the clips on or off in a respective row.  We refer to rows as scenes.  When a scene is launched, or turned on, the corresponding scene control button changes color from gray(the off-state) to magenta (the on-state). To allow users to stop all audio playback at once, a global stop button was added to the upper-left corner of the user interface. This stop button is red.  Initially, its opacity is about 50%.  When the stop button is activated by the user, its opactiy briefly goes to 100%, thus providing the user with feedback that the stop command has been acknowledged. 
+	Design Constraints
+
+	[MPC mode picture]
+
+	The primary design constraint of T3MPO was to program a 5x5, transparent button grid for the T3MPO user interface. This button grid is superimposed upon the depth map of the user and provides visual feedback with regards to which audio clips are currently playing or stopped and also issues commands to the Live environment. 
+
+	Created to emulate the functionality of a traditional MIDI programmable controller (MPC), each of the four leftmost columns of buttons represents audio or MIDI clips associated with a specific track or instrument in Ableton Live.  The user can command Live to start or stop playing a clip by moving their hand within the horizontal and vertical (x, y) limits of a button and then quickly moving their hand forward (z).  Buttons light up to inform the user that the corresponding clip is currently being looped in the Live environment.  Clips can be triggered individually to make gradual changes to a song, or the user can access the fifth column of buttons that will control the playback of all of the clips of the corresponding row (scene).
+
+	When an audio clip is off, the respective button is gray. Next, when a user toggles a button on, the button color changes to yellow and vise-versa. When a scene is launched, or turned on, the corresponding scene control button in the fifth column changes color from gray (the off state) to magenta (the on state).
+
+	To allow users to stop all audio playback at once, a global stop button was added to the upper-left corner of the user interface. This stop button is red and about 50% transparent. When the stop button is activated by the user, its opacity briefly goes to 100%, thus providing the user with feedback that the stop command has been acknowledged.
+
+	We need to determine a forward motion (press) occurred by sampling and comparing two frames worth of depth (z) position data for the right and left hands.  If the newest z-position exceeds the previous by a certain distance threshold, we decide that the user had moved their hand in a deliberate way to press a button.
+
+	Further algorithms are necessary to update the graphics for the 5x5 grid to match the behavior of clip playback in the Live environment.  For example, tracks in Ableton Live can only play one clip associated with that given track at a time, so we must program the grid to correctly inform the user of this behavior.
+
 	</p>
 

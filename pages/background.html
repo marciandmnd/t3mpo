@@ -1,24 +1,43 @@
-<h3>III. Background</h3>
+<h3>Background</h3>
 <hr>
 
 The project involves the use of several devices, software libraries, and applications working in tandem:
 <br><br>
 <strong>Kinect</strong>
 <br><br>
+<div class = "well" style="width: 575px; margin:0 auto;">
+	<img src ='images/kinect.jpg'>
+</div>
+<div style ="text-align:center">
+	<strong>Image 1.</strong> Kinect sensor
+</div>
+<br><br>
 <p>
 T3MPO uses the infrared emitter and camera of Microsoft’s Kinect in order to obtain data delineating the user’s body movements in 3-dimensional space.  The Kinect sensor emits a grid of infrared dots on the user and their surroundings.  The intensity and displacement of the infrared grid is measured by the camera and then converted to distances from the Kinect.  Using SDKs like OpenNI, users can manipulate this data to generate grayscale depth images, assign skeletal wireframes, and track joint movement and gestures.
 <br><br>
+| <a href='http://www.xbox.com/en-US/kinect'>Kinect Website</a> |
 </p>
+<br>
 <strong>OpenNI and openFrameworks</strong>
 <br><br>
 <p>
-OpenNI is an open source framework for 3D sensing devices that include the Kinect. openFrameworks is an open source C++ library for creative coding and graphics.  
+OpenNI is an open source framework for 3D sensing devices that include the Kinect. T3MPO uses OpenNI to communicate with the Kinect to generate a depth image, pin a skeletal wireframe to a user, and track the joints of the body in real time.   
 <br><br>
-T3MPO uses OpenNI to communicate with the Kinect to generate a depth image, pin a skeletal wireframe to a user, and track the joints of the body in real time.  
-We also used openFrameworks to easily implement GUIs for each of T3MPO’s modes.
+| <a href='http://www.openni.org/'>OpenNI Website</a> |
+<br><br>
+openFrameworks is an open source C++ library for creative coding and graphics.  We also used openFrameworks to easily implement GUIs for each of T3MPO’s modes. 
+<br><br>
+| <a href='http://www.openframeworks.cc/'>openFrameworks Website</a> |
 </p>
 <br>
 <strong>Ableton Live</strong>
+<br><br>
+	<div class = "well" style="width: 575px; margin:0 auto;">
+		<a href = 'images/AbletonClipLaunch.png' target ='blank'><img src ='images/AbletonClipLaunch.png' class='img-thumbnail'></a>
+	</div>
+	<div style ="text-align:center">
+	<strong>Image 2.</strong> Ableton clip launch mode screenshot (click to view enlarged image)
+</div>
 <br><br>
 <p>
 Ableton Live is a digital audio workstation (DAW) that is used as a tool for composing, recording, arranging, mixing and mastering music.  Live offers powerful integration with audio and MIDI sampling, has strong quantization and beat-matching capabilities, and remains popular with electronic performers for its versatility and universal compatibility with MIDI-programmable controllers (MPCs).
@@ -26,14 +45,53 @@ Ableton Live is a digital audio workstation (DAW) that is used as a tool for com
 
 Ableton Live serves as the music environment that T3MPO is built to interact with.  Users will interact with virtual controls and instruments within T3MPO which will then be translated to properly operating controls and effects within Ableton Live.
 <br><br>
+| <a href ='https://www.ableton.com/en/live/new-in-9/'>Ableton Website</a> |
 </p>
-
+<br>
 <strong>Max/MSP</strong>
 <br><br>
+<div class = "well" style="width: 575px; margin:0 auto;">
+	<video width="100%" controls>
+  		<source src="images/maxpatch1.mov" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	</div>
+	<div style ="text-align:center">
+	<strong>Video 1.</strong>Max/MSP patch for Ableton
+</div>
+<br>
 <p>
 Max/MSP is a modular, graphical programming language for music and multimedia. Because of Max’s popularity and ease in creating custom effects and instruments, the most recent versions of Ableton Live include a toolkit based on Max/MSP called Max for Live.  This toolkit allows users to easily implement their own custom sounds and controls in the Live performance and production environment.
 <br><br>
 
 In the T3MPO project, Max for Live modules are responsible for handling the outgoing UDP messages and decoding them to perform the intended commands within Ableton Live. 
+<br><br>
+| <a href ='http://cycling74.com/products/max/'>MAX Website</a> |      
+<a href ='https://www.ableton.com/en/live/max-for-live/'>MAX for Live Website</a> |
 </p>
- 
+ <br>
+
+<strong>Synapse</strong>
+<br><br>
+<div class = "well" style="width: 515px; margin:0 auto;">
+	<img src = 'images/synapse.png'>
+	</div>
+	<div style ="text-align:center">
+	<strong>Image 3.</strong> Synapse screenshot of a tracked user
+</div>
+<br>
+<p>
+Synapse is an open source application written by Ryan Challinor that uses the OpenNI and openFrameworks libraries to send joint and event data from the Kinect via OSC messages.  Synapse is packaged with Max for Live patches to translate those messages into meaningful controls within Ableton Live.  Challinor distributed his application and its source code after realizing that the general tools he developed could be modified and improved upon by others to create a more immersive and interesting performance.
+</p>
+<p>
+Synapse constantly reports the (x,y,z) positions and movements of 15 joints of the performer’s body while the application is running.  The Max for Live modules can be setup by the performer within Ableton Live to monitor specific joints of the body and alter aspects of the music performance in response to the movement of those joints.
+</p>
+<p>
+While Challinor’s Synapse offers a truly customizable means of performance, setting up a Live set that requires the control of many parameters, sound clips, and instruments quickly proves cumbersome, as the user is forced to manually program a separate Max for Live module for every intended means of control.  Furthermore, each added module puts additional strain on the user’s CPU.
+</p>
+<p>
+While Synapse produces an attractive-looking depth image of the user and has graphics to indicate certain movements of the performer, it fails to adequately inform the audience of what changes are taking place in the music environment.  Only the performer, who has setup the mappings of his joints prior to the performance is knowledgeable of how their movements control the music environment.
+<br><br>
+| <a href ='http://synapsekinect.tumblr.com/'>Synapse Website</a> |      
+</p>
+

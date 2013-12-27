@@ -18,15 +18,15 @@
 			</nav>
      	<div class ="col-md-3" style="padding-top:50px; padding-bottom:50px; padding-left:40px;"> 
 			<ul id = "pills" class="nav nav-pills nav-stacked" style="border:2px solid;border-radius:25px; width:250px; position:fixed;">
-				<li name = 'desc'><a href="#" id="descriptionLink">I. Description</a></li>
-				<li name = 'intro'><a href="#" id="introLink">II. Introduction</a></li>
-				<li name = 'bg'><a href="#" id="bgLink">III. Background</a></li>
-				<li name = 'cons'><a href="#" id="consLink">IV. Design Considerations</a></li>
-				<li name = 'specs'><a href="#" id="specsLink">V. Design Specs, Alternatives, & Implementation</a></li>
-				<li name = 'sched'><a href="#" id="schedLink">VI. Schedule and Budget</a></li>
-				<li name = 'results'><a href="#" id="resultsLink">VII. Results</a></li>
-				<li name = 'disc'><a href="#" id="discussionLink">VIII. Discussion & Conclusion</a></li>
-				<li name = 'team'><a href="#" id="teamLink">IV. Team</a></li>
+				<li name = 'desc'><a href="#" id="descriptionLink">Description</a></li>
+				<li name = 'intro'><a href="#" id="introLink">Introduction</a></li>
+				<li name = 'bg'><a href="#" id="bgLink">Background</a></li>
+				<li name = 'cons'><a href="#" id="consLink">Design Considerations</a></li>
+				<li name = 'specs'><a href="#" id="specsLink">Design Specs, Alternatives, & Implementation</a></li>
+				<li name = 'sched'><a href="#" id="schedLink">Schedule and Budget</a></li>
+				<li name = 'results'><a href="#" id="resultsLink">Results</a></li>
+				<li name = 'disc'><a href="#" id="discussionLink">Discussion & Conclusion</a></li>
+				<li name = 'team'><a href="#" id="teamLink">Team</a></li>
 			</ul>
 		</div>
 		<div class="col-md-9" id="mainContent" style="position:absolute;margin-left:350px;padding-right:150px; padding-top:30px;padding-bottom:100px;">
