@@ -94,7 +94,6 @@ By having multiple modes of operation, we provide more functionality for the use
 <p>
 	The application was built atop OpenNI's hand tracking sample program, NiHandTracker.  This sample program came bundled with the OpenNI framework.   NiHandTracker handles the user depth map image rendering as well as hand tracking. Before hand tracking may commence, a user must wave their hand in front of the sensor. NiHandTracker can then perform edge detection and determine where a user's hand is in space.  On the depth map image of the user, a small square, or dot, is superimposed atop tracked hands.  When a tracked hand moves in space, a 'tail' shows the path taken by the hand.
 	<br><br>
-
 	<div class = "well" style="width: 575px; margin:0 auto;">
 		<a href = 'images/handtracker.png' target ='blank'><img src ='images/handtracker.png' class='img-thumbnail'></a>
 	</div>
@@ -105,6 +104,7 @@ By having multiple modes of operation, we provide more functionality for the use
 <p>
 The standalone T3MPO module takes advantage of the functionality provided by NiHandTracker. Once the hands are tracked, quadrants are superimposed on the depth map image rendered by OpenNI. Within each quadrant lies a red square button at 50% opacity. To toggle a loop or trigger a sound, a user's hand must enter a quadrant and 'slap' the button.  Each button is assigned a loop and a sound.  The program knows what hand is used to slap the button and toggles a loop or triggers a sound accordingly.  
 </p>
+<br><br>
 <div class = "well" style="width: 575px; margin:0 auto;">
 		<a href = 'images/standalone.png' target ='blank'><img src ='images/standalone.png' class='img-thumbnail'></a>
 	</div>
