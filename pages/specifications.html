@@ -55,14 +55,14 @@ The T3MPO MIDI Guitar Max for Live module allows users to choose a root note and
 <br><br>
 <p>
 T3MPO owes a great deal to programmer Ryan Challinor and Synapse and we decided to pay tribute to them by dedicating a Synapse mode.  In this mode, users can freestyle dance and control aspects of the performance using their entire body.
-<p>
 </p>
+<p>
 While it has its shortcomings, Synapse’s ability to customize control knob-based controls with body movements is simply too powerful to not include in T3MPO.  In order to free up the computer’s processor while running T3MPO, we decided to encapsulate Synapse’s joint polling and event messaging in a single mode of T3MPO that would not interfere with the messages of other modes.  We also restrict the drawing of joint event indicators to this mode to avoid overburdening the user and audience with too many graphics at once.
-<p>
 </p>
+<p>
 To transition between modes easily, we created two mode arrow buttons that advance to the next adjacent mode when pressed by the user’s hands.  We also made the stop button a global control that can be accessed no matter which mode was currently active.
 <p>
-</p>
+<p>
 By having multiple modes of operation, we provide more functionality for the user than was originally included with Synapse, while also restricting the amount of operations a user can perform at a given time.  This allows users to reduce the strain they place upon their processors while still being able to utilize the functionalities that were originally included in Synapse.
 </p>
 <br><br>
@@ -71,6 +71,31 @@ By having multiple modes of operation, we provide more functionality for the use
 	A design alternative to the primary requirments was to develop a standalone T3MPO application where DAW parameters such as sound toggling and playback are handled internally in a 'standalone' application.  That is, instead of using a 3rd party DAW, such as Ableton, the standalone application implements its own DAW functionality with respect to audio clip playback.
 </p>
 <p>
+	The application was built atop OpenNI's hand tracking sample program, NiHandtracker.  This sample program came bundled with the OpenNI framework.   NiHandTracker handles the user depth map image rendering as well as hand tracking. Before hand tracking may commence, a user must wave their hand in front of the sensor. NiHandTracker can then perform edge detection and determine where a user's hand is in space.  On the depth map image of the user, a small square, or dot, is superimposed atop tracked hands.  When a tracked hand moves in space, a 'tail' shows the path taken by the hand.
+	<br><br>
+
+	<div class = "well" style="width: 575px; margin:0 auto;">
+		<a href = 'images/handtracker.png' target ='blank'><img src ='images/handtracker.png' class='img-thumbnail'></a>
+	</div>
+	<div style ="text-align:center">
+	<strong>Image .</strong> OpenN NiHandTracker program (click to enlarge)
+</div>
+<br><br>
+<p>
+The standalone T3MPO module takes advantage of the functionality provided by NiHandTracker.  Once a hand is tracked, the T3MPO user interface is drawn atop the depth map.  The user interface divides the depth map into quadrants whose borders are thing green lines.  Within each quadrant lies a button.  When a user pushes a button, the program determines which hand was used and toggles/triggers the appropriate audio.  
+</p>
+<div class = "well" style="width: 575px; margin:0 auto;">
+		<a href = 'images/standalone.png' target ='blank'><img src ='images/standalone.png' class='img-thumbnail'></a>
+	</div>
+	<div style ="text-align:center">
+	<strong>Image .</strong> Standalone T3MPO application built atop NiHandTracker (click to enlarge)
+</div>
+<br><br>
+<p>
+This T3MPO module was programmed such that the user's left hand controls audio loop toggling, while the right hand controls sound triggering.  In order to playback audio through the user's computer soundcard, access to the sound hardware was required.  To do this, XAudio2, a low-level API written in C++ for handling sound playing and mixing, was included in the source code and implemented as the audio engine.  Using the XAudio2 API, audio loop toggling, sound clip triggering, and sound mixing were realized. Playback of multiple loops and sounds simultaneously was also achieved via XAudio2.
+</p>
+<p>
+At this point the standalone T3MPO module is fairly elementary, for all the sound files used by the application are referenced directly in the source code.  This means that in order for a user to customize their T3MPO session, they must change the source code to reference the proper files and recompile.  Ideally, users should be able to pick whatever sounds the want to loop/trigger during runtime.  If the standalone application is to be developed further, it should be modified to accomadate user customizable T3MPO sessions.
 </p>
 <br>
 <h4>Preferred Implementation</h4>
