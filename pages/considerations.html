@@ -3,7 +3,7 @@
 <h4>Objective</h4>
 <br>
 <p>
-	The primary objective of T3MPO was to develop a software interface that provides users the capability to control the playback of audio clips in Ableton, a popular digital audio workstation(DAW), in 3-dimensional space. To control clip playback, a 5 x 5 button grid was superimposed on a depth-map image of the user.  The user can toggle the virtual buttons on or off in a similar fashion to their analog counterparts.  That is, to toggle a virtual button, a user pushes it.
+	The primary objective of T3MPO was to develop a software interface that provides users the capability to control the playback of audio clips in Ableton, a popular digital audio workstation (DAW), in 3-dimensional space. To control clip playback, a 5x5 button grid was superimposed on a depth-map image of the user.  The user can toggle the virtual buttons on or off in a similar fashion to their analog counterparts.  That is, to toggle a virtual button, a user pushes it.
 </p>
 <br>
 <h4>Constraints</h4>
@@ -12,13 +12,13 @@
 	<br><br>
 	<p>
 	<em>Kinect Sensor and Computer</em>:  
-	The Kinect is the 3D sensor used by T3MPO to retrieve and delineate the user's body position and gesture data. A desktop or laptop computer is also required to run T3MPO.
+	 The Kinect is the 3D sensor used by T3MPO to retrieve and delineate the user's body position and gesture data. A desktop or laptop computer is also required to run T3MPO.
 	<br><br>
-	The following hardware is required to use T3MPO:
+	These are the system requirements for using T3MPO:
 	<div style="padding-left:10px;">
 	<ul>
-		<li>Microsoft OS: Windows XP, 8Vista, 7, or </li>
-		<li>Apple OS: MAC OS X 10.6 or later</li>
+		<li>Microsoft OS: Windows XP, Vista, 7, or 8, or </li>
+		<li>Apple OS: Mac OS X 10.6 or later</li>
 		<li>32 bit (x86) or 64 bit (x64) processor</li>
 		<li>Dual-core 2.66-GHz or faster processor</li>
 		<li>Dedicated USB 2.0 bus</li>
@@ -36,8 +36,8 @@
 	<div style="padding-left:10px;">
 	<ul>
 		<li>OpenNI: Open source software development kit for 3D Sensors.</li>
-		<li>Synapse: A software module built using OpenNI framework and has message sending capabilities for communication with DAWs.</li>
-		<li>Ableton: Ableton is the DAW whose state parameters are modulated via T3MPO. The system requirements for Ableton are: Intel® Mac with Mac OS X 10.5 or later, or PC with Windows XP, Vista, 7, or 8; Multicore processor; 2 GB RAM; 1024x768 display; DVD drive or broadband internet connection for installation;  3GB free disk space are required for basic installation</li>
+		<li>Synapse: A software module built using the OpenNI framework and has message sending capabilities for communication with DAWs.</li>
+		<li>Ableton Live (version 8 or later): Ableton Live is the DAW whose state parameters are modulated via T3MPO. The system requirements for Live are: Intel® Mac with Mac OS X 10.5 or later, or PC with Windows XP, Vista, 7, or 8; Multicore processor; 2 GB RAM; 1024x768 display; DVD drive or broadband internet connection for installation;  3GB free disk space are required for basic installation</li> 
 	</ul> 
 	</div>
 	</p>
@@ -47,7 +47,7 @@
 	<img src ='images/MPCmode.gif'>
 	</div>
 	<div style ="text-align:center">
-		<strong>Image 1.</strong> T3MPO's MPC mode
+		<h6>T3MPO's MPC mode</h6>
 	</div>
 	<br><br>
 	<p>
@@ -60,12 +60,12 @@
 		<a href = 'images/mpc.jpg' target ='blank'><img src ='images/mpc.jpg' class='img-thumbnail'></a>
 	</div>
 	<div style ="text-align:center">
-	<strong>Image 2.</strong> MPC 2000XL by Akai (click to enlarge)
+	<h6>MPC 2000XL by Akai (click to enlarge)</h6>
 	</div>
 	<br>
 	When an audio clip is off, the respective button is gray. Next, when a user toggles a button on, the button color changes to yellow and vise-versa. When a scene is launched, or turned on, the corresponding scene control button in the fifth column changes color from gray (the off state) to magenta (the on state).
 
-	To allow users to stop all audio playback at once, a global stop button was added to the upper-left corner of the user interface. This stop button is red and about 50% transparent. When the stop button is activated by the user, its opacity briefly goes to 100%, thus providing the user with feedback that the stop command has been acknowledged.
+	To allow users to stop all audio playback at once, a global stop button was added to the upper-left corner of the user interface. This stop button is red and about 50% transparent. When the stop button is activated by the user, its opacity briefly increases, thus providing the user with feedback that the stop command has been acknowledged.
 
 	We need to determine a forward motion (press) occurred by sampling and comparing two frames worth of depth (z) position data for the right and left hands.  If the newest z-position exceeds the previous by a certain distance threshold, we decide that the user had moved their hand in a deliberate way to press a button.
 

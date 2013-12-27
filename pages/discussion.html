@@ -1,18 +1,24 @@
 <h3>Discussion & Conclusion</h3>
 <hr>
 <p>
-	The T3MPO project offers an exploration into alternative means of electronic music production using 3D sensors.  The primary objective of T3MPO, toggling audio clips via a button grid, was satisfied.  Furthermore, since the primary objective was satisfied with a fair amount of time remaining in the term, additional T3MPO modules were implemented.  These additonal modules were scatcher, guitar, and Synapse modes.  Also, a standalone T3MPO application with an internal audio engine was realized that enables users to toggle loops and trigger sounds.  
-	<br><br>
-	Naturally, improvements to the system can be made.  The architecture of the T3MPO modules, as it stands, is quite procedural as opposed to object-oriented. This means that features of the T3MPO software were implemented using primitive data types and structures such as integer arrays. Object oriented programming (OOP), on the other hand, is an incredibly powerful approach to software development. In OOP, everything is an object. An object encapsulates, or provides a higher level of abstraction, of behavior and states of particular software elements.  With respect to T3MPO, this means that modules and their respective elements can be instantiated as class objects.  For instance the button grid can be a class object as well as the buttons themselves. If T3MPO is to be developed further, an object-oriented approach would serve the system and its developers well. By using an OOP approach, a T3MPO application programming interface (API) may be written to provide developers with a powerful toolset for writing T3MPO modules
-	<br>   
-	<br><br> 
-	<h4>Resources</h4>
-	<hr>
-	<ol>
-	<li>Davison, Andrew. Kinect Open Source Programming Secrets: Hacking the Kinect with OpenNI, NITE, and Java. New York: McGraw-Hill, 2012. Print.</li>
-	<li>"Max For Live." Cycling 74. N.p., n.d. Web. 24 Dec. 2013. http://cycling74.com/products/maxforlive.</li>
-	<li>Music Production with Live 9 and Push. N.p., n.d. Web. 1 Dec. 2013. https://www.ableton.com.</li>
-	<li>"Open-source SDK for 3D Sensors - OpenNI." OpenNI. N.p., n.d. Web. 1 Dec. 2013. http://www.openni.org.</li>
-	<li>"Synapse for Kinect." Synapse for Kinect. N.p., n.d. Web. 1 Dec. 2013. http://www.synapsekinect.tumblr.com</li>
-	</ol>
+	The T3MPO project offers an exploration into alternative means of electronic music production using 3D sensors. The primary objective of T3MPO, toggling audio clips via a button grid, was satisfied both as a standalone application and Synapse add-on. Furthermore, since the primary objective was satisfied with a fair amount of time remaining in the term, additional T3MPO modules were implemented to the Synapse-based application. These additional modules were Scratcher, Guitar, and Synapse modes. 
+</p>
+<p>
+
+Naturally, improvements to the system can be made. The algorithms for detecting button presses and guitar strums is highly simplified.  New users encounter a bit of a learning curve when using T3MPO for the first time.  Since button presses and strums are triggered by moving a hand in the forward (z) or up/down (y) directions, respectively, users sometimes encounter difficulties with these operations because they fail to move their hands in this way.  With practice users will become accustomed to reproducing the correct gestures, however, future versions of T3MPO should strive to develop triggering algorithms that are more complex and match the more fluid and natural movements of the human body.
+</p>
+<p>
+None of the T3MPO team members had very much experience programming graphics prior to the development of this project.  While the graphics we created successfully inform the performer of changes in the music environment, more impressive graphics will be necessary to satisfy the audience during a large scale concert event.  openFrameworks has powerful particle generation and 3D modeling capabilities that we didn’t even scratch the surface of.  We would like to look into these concepts in the future to improve T3MPO further.
+</p>
+<p>
+Also, T3MPO has a lot of ground to cover before it can even compete with the level of functionality provided by traditional MPCs.  With a dizzying array of buttons, sliders, and knobs, MPCs will remain kings of the electronic genre until we can come up with more clever models for quickly and easily navigating a huge set of musical controls.
+</p>
+<p>
+Also, the architecture of the T3MPO modules, as it stands, is quite procedural as opposed to object-oriented. This means that features of the T3MPO software were implemented using primitive data types and structures such as integer arrays. Object oriented programming (OOP), on the other hand, is an incredibly powerful approach to software development. OOP provides encapsulation, or a higher level of abstraction, of behavior and states of particular software elements. With respect to T3MPO, this means that modules and their respective elements can be instantiated as class objects. For instance, the button grid can be a class object as well as the buttons themselves. If T3MPO is to be developed further, an object-oriented approach would serve the system and its developers well. By using an OOP approach, a T3MPO application programming interface (API) may be written to provide developers with a powerful toolset for writing T3MPO modules in the future.
+</p>
+<p>
+But the excitement experienced by witnessing a performer using T3MPO is undeniable.  We have demonstrated T3MPO’s capabilities to numerous colleagues and friends and the reaction to watching someone producing music without touching an instrument is almost impressive as the feeling a performer gets by playing an instrument by moving their hand through the air.  Successfully implementing the basic requirements of the project in both the form of the MPC mode and the standalone version months prior to the deadline allowed us to ambitiously focus on adding additional functionality with three more modes.  The combination of these modes allows users to easily switch between several aspects of the performance during the set, giving performers the added functionality they need to create a more expressive performance and at the same time without overloading their processor.  
+</p>
+<p>
+We believe T3MPO serves as an example of what the music world is capable of and ready for.  With this small step, we are ready to begin developing systems that will produce music in ways that will cater specifically to the way an artist feels comfortable moving and playing.  We are ready to create visualizations that will excite the audience and form a more interactive experience for concertgoers.  And we are ready to encapsulate this system in such a way to make it more powerful and functional than the current dominant technology.
 </p>

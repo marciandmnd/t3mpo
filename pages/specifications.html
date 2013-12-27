@@ -9,16 +9,15 @@ T3MPO must accurately represent the playback status of the audio clips in the Ab
 <strong>MPC Mode</strong>
 <br><br>
 <iframe  style="display:block;margin:0 auto;" width="560" height="315" src="//www.youtube.com/embed/RmRiCE9E1cQ" frameborder="0" allowfullscreen></iframe>
-<br>
 <div style ="text-align:center">
-	<strong>Video 1.</strong> T3MPO MPC mode demonstration
+	<h6>T3MPO MPC mode demonstration</h6>
 </div>
 <br>
 <p>
 The starting mode of T3MPO and the original goal of the project acts as an environment where the main structure of the song can be assembled.
 </p>
 <p>
-The MPC mode is a virtual grid of buttons that the user can interact with to make coarse changes within the live environment.  The performer can play or stop audio clips by toggling the on/off state of their corresponding buttons.  One column of button is reserved for turning on or off several clips at once.
+The MPC mode features a virtual grid of buttons that the user can interact with to make coarse changes within the Live environment.  The performer can play or stop audio clips by toggling the on/off state of their corresponding buttons.  One column of button is reserved for turning on or off several clips at once.
 </p>
 <p>
 Previously, Synapse allowed for clip launching through the combined use of the Clip Launcher and Max Kinect Event modules.  Users were forced to setup and map a dedicated Kinect Event module for each Clip Launcher module, which was a time-consuming and processor-intensive task if the user wished to reliably control several clips at once.  With the generation of the MPC mode provided by T3MPO, users can control the playback of twenty unique clips either individually or scenically with a single Max for Live module that listens for related UDP messages and correctly navigates play and stop signals to the appropriate clip within the Live API.  Furthermore, T3MPO’s MPC mode provides users with graphical feedback informing them and the audience of changes within the song structure or progression.
@@ -27,9 +26,8 @@ Previously, Synapse allowed for clip launching through the combined use of the C
 <strong>Scratcher Mode</strong>
 <br><br>
 <iframe  style="display:block;margin:0 auto;" width="560" height="315" src="//www.youtube.com/embed/FRF3HFItauk" frameborder="0" allowfullscreen></iframe>
-<br>
 <div style ="text-align:center">
-	<strong>Video 2.</strong> T3MPO Scratcher mode demonstration
+	<h6>T3MPO Scratcher mode demonstration</h6>
 </div>
 <br>
 
@@ -49,19 +47,18 @@ T3MPO’s Scratcher Max for Live module operates similarly to the MPC mode but w
 In order for the user to make rapid changes to the scratcher clip playbacks, we chose to develop a model where no forward push was required to activate buttons.  Instead, a user’s hand only needs to be detected within the (x,y) regions of a button in order activate a button. 
 </p>
 <p>
-By choosing alternating clips and quantization intervals, users can assemble interesting rhythms and sounds akin to a stuttering or scratching effect.  This mode of performance is already being utilized by MPC-wielding electronic performers, but is a brand new functionality that was not included originally with Synapse.  
+By choosing alternating clips and quantization intervals, users can assemble interesting rhythms and sounds akin to a stuttering or scratching effect.  This mode of performance is already being utilized by MPC-wielding electronic performers, but it is a brand new functionality that was not included originally with Synapse.  
 </p>
 <br><br> 
 <strong>Guitar Mode</strong>
 <br><br> 
 <iframe  style="display:block;margin:0 auto;" width="560" height="315" src="//www.youtube.com/embed/MqluDg9hGKs" frameborder="0" allowfullscreen></iframe>
-<br>
 <div style ="text-align:center">
-	<strong>Video 3.</strong> T3MPO Guitar mode demonstration
+	<h6>T3MPO Guitar mode demonstration</h6>
 </div>
 <br>
 <p>
-The MIDI Guitar mode allows users to play a virtual air guitar capable of generating MIDI notes.
+The Guitar mode allows users to play a virtual air guitar capable of generating MIDI notes.
 </p>
 <p>
 The user can select from seven possible MIDI notes by moving their left hand along the fretboard of the virtual guitar.  The virtual guitar GUI informs the user of selected notes by drawing a colored region along the fretboard of the guitar.  The guitar defaults to selecting the first note when the user’s hand has not been detected along the fretboard.  The selected note is played when the user moves their hand up or down past a certain threshold across the strings of the guitar.  Color-coded strum arrows are drawn to the screen briefly to signify a note being played.
@@ -73,16 +70,15 @@ The T3MPO MIDI Guitar Max for Live module allows users to choose a root note and
 <strong>Synapse Mode</strong>
 <br><br>
 <iframe  style="display:block;margin:0 auto;" width="560" height="315" src="//www.youtube.com/embed/bA43FpJlcZA" frameborder="0" allowfullscreen></iframe>
-<br>
 <div style ="text-align:center">
-	<strong>Video 4.</strong> T3MPO Synapse mode demonstration
+	<h6>T3MPO Synapse mode demonstration</h6>
 </div>
 <br>
 <p>
 T3MPO owes a great deal to programmer Ryan Challinor and Synapse and we decided to pay tribute to them by dedicating a Synapse mode.  In this mode, users can freestyle dance and control aspects of the performance using their entire body.
 </p>
 <p>
-While it has its shortcomings, Synapse’s ability to customize control knob-based controls with body movements is simply too powerful to not include in T3MPO.  In order to free up the computer’s processor while running T3MPO, we decided to encapsulate Synapse’s joint polling and event messaging in a single mode of T3MPO that would not interfere with the messages of other modes.  We also restrict the drawing of joint event indicators to this mode to avoid overburdening the user and audience with too many graphics at once.
+While it has its shortcomings, Synapse’s ability to customize knob-based controls with body movements is simply too powerful to not include in T3MPO.  In order to free up the computer’s processor while running T3MPO, we decided to encapsulate Synapse’s joint polling and event messaging in a single mode of T3MPO that would not interfere with the messages of other modes.  We also restrict the drawing of joint event indicators to this mode to avoid overburdening the user and audience with too many graphics at once.
 </p>
 <p>
 To transition between modes easily, we created two mode arrow buttons that advance to the next adjacent mode when pressed by the user’s hands.  We also made the stop button a global control that can be accessed no matter which mode was currently active.
@@ -93,34 +89,34 @@ By having multiple modes of operation, we provide more functionality for the use
 <br><br>
 <h4>Design Alternatives</h4>
 <p>
-	A design alternative to the primary requirments was to develop a standalone T3MPO application where DAW parameters such as sound toggling and playback are handled internally in a 'standalone' application.  That is, instead of using a 3rd party DAW, such as Ableton, the standalone application implements its own DAW functionality with respect to audio clip playback.
+	A design alternative to the primary requirements was to develop a standalone T3MPO application where DAW parameters such as sound toggling and playback are handled internally in a 'standalone' application.  That is, instead of using a 3rd party DAW, such as Ableton Live, the standalone application implements its own DAW functionality with respect to audio clip playback.
 </p>
 <p>
-	The application was built atop OpenNI's hand tracking sample program, NiHandtracker.  This sample program came bundled with the OpenNI framework.   NiHandTracker handles the user depth map image rendering as well as hand tracking. Before hand tracking may commence, a user must wave their hand in front of the sensor. NiHandTracker can then perform edge detection and determine where a user's hand is in space.  On the depth map image of the user, a small square, or dot, is superimposed atop tracked hands.  When a tracked hand moves in space, a 'tail' shows the path taken by the hand.
+	The application was built atop OpenNI's hand tracking sample program, NiHandTracker.  This sample program came bundled with the OpenNI framework.   NiHandTracker handles the user depth map image rendering as well as hand tracking. Before hand tracking may commence, a user must wave their hand in front of the sensor. NiHandTracker can then perform edge detection and determine where a user's hand is in space.  On the depth map image of the user, a small square, or dot, is superimposed atop tracked hands.  When a tracked hand moves in space, a 'tail' shows the path taken by the hand.
 	<br><br>
 
 	<div class = "well" style="width: 575px; margin:0 auto;">
 		<a href = 'images/handtracker.png' target ='blank'><img src ='images/handtracker.png' class='img-thumbnail'></a>
 	</div>
 	<div style ="text-align:center">
-	<strong>Image 1.</strong> OpenNI NiHandTracker program (click to enlarge)
+	<h6>OpenNI NiHandTracker program (click to enlarge)</h6>
 </div>
 <br><br>
 <p>
-The standalone T3MPO module takes advantage of the functionality provided by NiHandTracker.  Once a hand is tracked, the T3MPO user interface is drawn atop the depth map.  The user interface divides the depth map into quadrants whose borders are thing green lines.  Within each quadrant lies a button.  When a user pushes a button, the program determines which hand was used and toggles/triggers the appropriate audio.  
+The standalone T3MPO module takes advantage of the functionality provided by NiHandTracker. Once the hands are tracked, quadrants are superimposed on the depth map image rendered by OpenNI. Within each quadrant lies a red square button at 50% opacity. To toggle a loop or trigger a sound, a user's hand must enter a quadrant and 'slap' the button.  Each button is assigned a loop and a sound.  The program knows what hand is used to slap the button and toggles a loop or triggers a sound accordingly.  
 </p>
 <div class = "well" style="width: 575px; margin:0 auto;">
 		<a href = 'images/standalone.png' target ='blank'><img src ='images/standalone.png' class='img-thumbnail'></a>
 	</div>
 	<div style ="text-align:center">
-	<strong>Image 2.</strong> Standalone T3MPO application built atop NiHandTracker (click to enlarge)
+	<h6>Standalone T3MPO application built atop NiHandTracker (click to enlarge)</h6>
 </div>
 <br><br>
 <p>
 This T3MPO module was programmed such that the user's left hand controls audio loop toggling, while the right hand controls sound triggering.  In order to playback audio through the user's computer soundcard, access to the sound hardware was required.  To do this, XAudio2, a low-level API written in C++ for handling sound playing and mixing, was included in the source code and implemented as the audio engine.  Using the XAudio2 API, audio loop toggling, sound clip triggering, and sound mixing were realized. Playback of multiple loops and sounds simultaneously was also achieved via XAudio2.
 </p>
 <p>
-At this point the standalone T3MPO module is fairly elementary, for all the sound files used by the application are referenced directly in the source code.  This means that in order for a user to customize their T3MPO session, they must change the source code to reference the proper files and recompile.  Ideally, users should be able to pick whatever sounds the want to loop/trigger during runtime.  If the standalone application is to be developed further, it should be modified to accomadate user customizable T3MPO sessions.
+At this point the standalone T3MPO module is fairly elementary, for all the sound files used by the application are referenced directly in the source code.  This means that in order for a user to customize their T3MPO session, they must change the source code to reference the proper files and recompile.  Ideally, users should be able to pick whatever sounds the want to loop/trigger during runtime.  If the standalone application is to be developed further, it should be modified to accommodate user customizable T3MPO sessions.
 </p>
 <br>
 <h4>Preferred Implementation</h4>
